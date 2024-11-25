@@ -25,6 +25,7 @@ apt_ros-dep:
 
 pip_deps:
   - packaging==24.1
+  - rosdep
 
 script_entrypoint-user:
   - entrypoint.sh
