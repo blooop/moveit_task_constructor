@@ -1,0 +1,27 @@
+# This file describes the docker image and rocker extensions to load
+# Rockerc configuration: https://github.com/blooop/rockerc
+#
+# Key components:
+# - image: Specifies the base image to pass to rocker
+# - args: Lists additional features or tools to be added to the docker image
+
+# image: nvcr.io/nvidia/isaac-sim:4.2.0
+# image: nvidia/cuda:12.2.2-devel-ubuntu22.04
+# image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel
+
+# image: ros:humble
+image: ubuntu:22.04
+args:
+  - nvidia
+  # - cuda
+  - x11
+  - user
+  - pull
+  - deps
+  - git
+  # - pixi
+  - ssh
+  - oyr-colcon
+  - privileged
+  - dev-helpers
+#env-file: env.txt
